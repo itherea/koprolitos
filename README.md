@@ -35,10 +35,11 @@ python3 -m http.server 8000
 
 y abrir http://localhost:8000.
 
-## Antes de publicar
+## Publicación
 
-1. Reemplazar `SITE_URL` en `index.html` (meta `og:image` y `og:url`) por la URL final, sin barra al final. Ejemplo: `https://koprolitos.arielhcontini.online`. Sin esto, WhatsApp e Instagram no muestran la imagen al compartir el link.
-2. Publicar con GitHub Pages (Settings → Pages → Deploy from a branch → `main` / root) o con cualquier hosting estático.
+El sitio está publicado con GitHub Pages en https://itherea.github.io/koprolitos/ (rama `main`, raíz).
+
+Si cambia de dominio, actualizar en `index.html` el `canonical`, `og:url` y `og:image`: tienen que ser direcciones absolutas para que WhatsApp e Instagram muestren la imagen al compartir el link.
 
 ## Agregar un estrato
 
