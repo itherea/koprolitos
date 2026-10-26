@@ -113,7 +113,9 @@ a.poster::before{content:"";position:absolute;inset:0 0 auto 0;height:35%;backgr
 .album p{margin:0 0 24px;max-width:52ch}
 .members{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 24px;font-size:18px}
 .members li{min-width:0}
-.album .label{margin:28px 0 0}
+.album .ig{display:inline-block;margin-top:24px;font-family:var(--f-mono);font-size:13px;letter-spacing:.04em;text-decoration:none;border-bottom:1px solid var(--amber);padding-bottom:2px}
+.album .ig:hover{color:var(--amber)}
+.album .label{margin:20px 0 0}
 
 /* process + credits */
 .band{border-top:1px solid var(--line);padding-block:64px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px 48px}
@@ -269,6 +271,7 @@ footer{border-top:1px solid var(--line);padding-block:24px 40px;display:flex;jus
         <li>Emanuel Bibiloni</li>
         <li>Uriel Mackern</li>
       </ul>
+      <a class="ig" href="https://www.instagram.com/koprolitos._/" target="_blank" rel="noopener">@koprolitos._ en Instagram</a>
       <p class="mono label">℗ Escalera circular</p>
     </div>
   </section>
@@ -288,7 +291,7 @@ footer{border-top:1px solid var(--line);padding-block:24px 40px;display:flex;jus
   <section class="band" aria-labelledby="creditos">
     <h2 id="creditos">Créditos</h2>
     <div class="credits">
-      <div><span class="mono">Banda</span><strong>Koprolitos</strong></div>
+      <div><span class="mono">Banda</span><strong><a href="https://www.instagram.com/koprolitos._/" target="_blank" rel="noopener">Koprolitos</a></strong></div>
       <div><span class="mono">Dirección visual y edición</span><strong>Ariel Hernán Contini</strong></div>
       <div><span class="mono">Generación</span><strong>Google Gemini Pro</strong></div>
       <div><span class="mono">Contacto</span><strong><a href="https://arielhcontini.online" target="_blank" rel="noopener">arielhcontini.online</a></strong></div>
