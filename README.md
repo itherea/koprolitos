@@ -1,8 +1,10 @@
 # Koprolitos 2026
 
-Sitio de una sola página que presenta los tres videoclips en plastilina que Ariel Hernán Contini dirigió y editó para la banda Koprolitos, generados con Google Gemini Pro.
+Sitio de una sola página que presenta los tres videoclips en plastilina que Ariel Hernán Contini dirigió y editó para *Antimeme*, el disco de Koprolitos (℗ Escalera circular), generados con Google Gemini Pro.
 
-| Estrato | Título | Duración | YouTube |
+Koprolitos: Gaspar Daffunchio, Pedro Daffunchio, Emanuel Bibiloni y Uriel Mackern.
+
+| Estrato | Canción | Duración | YouTube |
 |---|---|---|---|
 | 01 | Nada de mí | 3:09 | `hHB4SJT_kek` |
 | 02 | Civiles | 2:58 | `nhssz8m2v6I` |
@@ -14,7 +16,7 @@ Sitio de una sola página que presenta los tres videoclips en plastilina que Ari
 index.html            página completa (HTML, CSS y JS en un solo archivo)
 assets/
   fonts/              Big Shoulders Display, Instrument Sans y JetBrains Mono (woff2, alojadas acá)
-  img/                portada y fotogramas en WebP
+  img/                portada, fotogramas y tapa del disco en WebP
   og.jpg              imagen para compartir (1200 × 630)
   favicon.svg
 ```

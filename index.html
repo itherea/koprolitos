@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Koprolitos 2026</title>
-<meta name="description" content="Tres videoclips en plastilina para Koprolitos, generados con Google Gemini Pro. Dirección y edición de Ariel Hernán Contini.">
+<meta name="description" content="Tres videoclips en plastilina para Antimeme, el disco de Koprolitos, generados con Google Gemini Pro. Dirección y edición de Ariel Hernán Contini.">
 <meta name="theme-color" content="#111315">
 <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
@@ -12,7 +12,7 @@
 <meta property="og:type" content="website">
 <meta property="og:locale" content="es_AR">
 <meta property="og:title" content="Koprolitos 2026">
-<meta property="og:description" content="Tres videoclips en plastilina generados con Google Gemini Pro. Dirección y edición de Ariel Hernán Contini.">
+<meta property="og:description" content="Tres videoclips en plastilina para el disco Antimeme, generados con Google Gemini Pro. Dirección y edición de Ariel Hernán Contini.">
 <meta property="og:image" content="SITE_URL/assets/og.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
@@ -102,10 +102,18 @@ a.poster::before{content:"";position:absolute;inset:0 0 auto 0;height:35%;backgr
 .sheet dt{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ash);padding-top:3px}
 .sheet dd{margin:0;font-size:15px;overflow-wrap:anywhere}
 .sheet .num{font-variant-numeric:tabular-nums}
-.sheet .ref{font-family:var(--f-mono);font-size:12px;color:var(--ash)}
 .core{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0}
 .core figure{margin:0;min-width:0;display:flex;flex-direction:column;gap:8px}
 .core img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:2px;background:var(--basalt-2)}
+
+/* album */
+.album{border-top:1px solid var(--line);padding-block:64px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px 48px;align-items:center}
+.album img{display:block;width:100%;height:auto;max-width:480px;border-radius:2px}
+.album h2{font-family:var(--f-display);font-weight:900;text-transform:uppercase;line-height:.85;font-size:clamp(56px,9vw,128px);margin:6px 0 20px;letter-spacing:-.01em}
+.album p{margin:0 0 24px;max-width:52ch}
+.members{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 24px;font-size:18px}
+.members li{min-width:0}
+.album .label{margin:28px 0 0}
 
 /* process + credits */
 .band{border-top:1px solid var(--line);padding-block:64px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px 48px}
@@ -121,7 +129,7 @@ a.poster::before{content:"";position:absolute;inset:0 0 auto 0;height:35%;backgr
 footer{border-top:1px solid var(--line);padding-block:24px 40px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
 
 @media (max-width:760px){
-  .intro,.band{grid-template-columns:minmax(0,1fr)}
+  .intro,.band,.album{grid-template-columns:minmax(0,1fr)}
   .spec,.spec:nth-child(even){grid-template-columns:minmax(0,1fr)}
   .spec:nth-child(even) .poster{order:0}
   .split,.core{grid-template-columns:minmax(0,1fr)}
@@ -144,8 +152,8 @@ footer{border-top:1px solid var(--line);padding-block:24px 40px;display:flex;jus
     <div class="hero-text">
       <h1>Koprolitos</h1>
       <div class="hero-sub">
-        <p>Tres videoclips en plastilina generados con Google Gemini Pro. Dirección y edición de Ariel Hernán Contini.</p>
-        <span class="mono">Trelew · Patagonia</span>
+        <p>Tres videoclips en plastilina para el disco <em>Antimeme</em>, generados con Google Gemini Pro. Dirección y edición de Ariel Hernán Contini.</p>
+        <span class="mono">Patagonia argentina</span>
       </div>
     </div>
   </section>
@@ -170,15 +178,15 @@ footer{border-top:1px solid var(--line);padding-block:24px 40px;display:flex;jus
       <div class="meta">
         <p class="stratum">Estrato 01</p>
         <h2>Nada de mí</h2>
-        <p class="concept">Animación experimental. Concepto libre y abstracto.</p>
+        <p class="concept">Las imágenes nacen de la letra de la canción. Alguien busca encajar en un lugar que no le hace espacio y termina fundiéndose con la realidad, hasta diluirse.</p>
         <dl class="sheet">
           <dt>Banda</dt><dd>Koprolitos</dd>
+          <dt>Disco</dt><dd><em>Antimeme</em></dd>
           <dt>Año</dt><dd class="num">2026</dd>
           <dt>Duración</dt><dd class="num">3:09</dd>
           <dt>Formato</dt><dd>Animación experimental</dd>
           <dt>Generación</dt><dd>Google Gemini Pro</dd>
           <dt>Dirección</dt><dd>Ariel H. Contini</dd>
-          <dt>Ref.</dt><dd class="ref">yt/hHB4SJT_kek</dd>
         </dl>
       </div>
       <div class="core" role="group" aria-label="Fotogramas de Nada de mí">
@@ -202,12 +210,12 @@ footer{border-top:1px solid var(--line);padding-block:24px 40px;display:flex;jus
         <p class="concept">Una estética circense que parte de Monty Python y se cruza con <em>Everyone Comes to the Freak Show</em>, de The Residents.</p>
         <dl class="sheet">
           <dt>Banda</dt><dd>Koprolitos</dd>
+          <dt>Disco</dt><dd><em>Antimeme</em></dd>
           <dt>Año</dt><dd class="num">2026</dd>
           <dt>Duración</dt><dd class="num">2:58</dd>
           <dt>Formato</dt><dd>Animación experimental en plastilina</dd>
           <dt>Generación</dt><dd>Google Gemini Pro</dd>
           <dt>Dirección</dt><dd>Ariel H. Contini</dd>
-          <dt>Ref.</dt><dd class="ref">yt/nhssz8m2v6I</dd>
         </dl>
       </div>
       <div class="core" role="group" aria-label="Fotogramas de Civiles">
@@ -231,12 +239,12 @@ footer{border-top:1px solid var(--line);padding-block:24px 40px;display:flex;jus
         <p class="concept">Dos carnotaurus se encuentran y se lanzan juntos desde un risco. Una metáfora del acto sexual.</p>
         <dl class="sheet">
           <dt>Banda</dt><dd>Koprolitos</dd>
+          <dt>Disco</dt><dd><em>Antimeme</em></dd>
           <dt>Año</dt><dd class="num">2026</dd>
           <dt>Duración</dt><dd class="num">2:18</dd>
           <dt>Especie</dt><dd><em>Carnotaurus sastrei</em>, Cretácico tardío, Chubut</dd>
           <dt>Generación</dt><dd>Google Gemini Pro</dd>
           <dt>Dirección</dt><dd>Ariel H. Contini</dd>
-          <dt>Ref.</dt><dd class="ref">yt/ZwkB-K8fPCs</dd>
         </dl>
       </div>
       <div class="core" role="group" aria-label="Fotogramas de Panal">
@@ -245,6 +253,24 @@ footer{border-top:1px solid var(--line);padding-block:24px 40px;display:flex;jus
         <figure><img src="assets/img/estrato-03-c-800.webp" width="800" height="450" loading="lazy" alt="Un carnotaurus rosado enroscado sobre sí mismo entre pasto azul y hongos de plastilina"><figcaption class="mono">KP-26-03-c</figcaption></figure>
       </div>
     </article>
+  </section>
+
+  <section class="album" aria-labelledby="disco">
+    <img src="assets/img/antimeme-720.webp" srcset="assets/img/antimeme-480.webp 480w, assets/img/antimeme-720.webp 720w" sizes="(max-width: 760px) 100vw, 480px" width="720" height="672" loading="lazy"
+      alt="Tapa del disco Antimeme: una criatura dibujada en tinta negra, armada con objetos cotidianos como una regadera roja, una lamparita, un celular y una bicicleta, camina sobre un fondo de trazos azules junto a una rueda con la palabra Antimeme">
+    <div>
+      <span class="mono">El disco</span>
+      <h2 id="disco">Antimeme</h2>
+      <p>Los tres videos acompañan canciones de <em>Antimeme</em>, el disco de Koprolitos. Cada video lleva el nombre de su canción.</p>
+      <span class="mono">Integrantes</span>
+      <ul class="members">
+        <li>Gaspar Daffunchio</li>
+        <li>Pedro Daffunchio</li>
+        <li>Emanuel Bibiloni</li>
+        <li>Uriel Mackern</li>
+      </ul>
+      <p class="mono label">℗ Escalera circular</p>
+    </div>
   </section>
 
   <section class="band" aria-labelledby="proceso">
@@ -272,7 +298,7 @@ footer{border-top:1px solid var(--line);padding-block:24px 40px;display:flex;jus
 
   <footer>
     <span class="mono">Koprolitos · 2026</span>
-    <span class="mono">Iterea</span>
+    <span class="mono">Itherea</span>
   </footer>
 </div>
 
