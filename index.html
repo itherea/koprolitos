@@ -1,340 +1,911 @@
 <!doctype html>
 <html lang="es">
+
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Koprolitos 2026</title>
-<meta name="description" content="Tres videoclips en plastilina para Antimeme, el disco de Koprolitos. Dirección y edición de Ariel Hernán Contini.">
-<meta name="theme-color" content="#111315">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>Koprolitos 2026</title>
+  <meta name="description"
+    content="Tres videoclips en plastilina para Antimeme, el disco de Koprolitos. Dirección y edición de Ariel Hernán Contini.">
+  <meta name="theme-color" content="#111315">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 
-<link rel="canonical" href="https://itherea.github.io/koprolitos/">
-<!-- Open Graph: si el sitio cambia de dominio, actualizar canonical, og:image y og:url (ver README) -->
-<meta property="og:type" content="website">
-<meta property="og:locale" content="es_AR">
-<meta property="og:title" content="Koprolitos 2026">
-<meta property="og:description" content="Tres videoclips en plastilina para el disco Antimeme. Dirección y edición de Ariel Hernán Contini.">
-<meta property="og:image" content="https://itherea.github.io/koprolitos/assets/og.jpg">
-<meta property="og:image:width" content="1200">
-<meta property="og:image:height" content="630">
-<meta property="og:url" content="https://itherea.github.io/koprolitos/">
-<meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://itherea.github.io/koprolitos/">
+  <!-- Open Graph: si el sitio cambia de dominio, actualizar canonical, og:image y og:url (ver README) -->
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_AR">
+  <meta property="og:title" content="Koprolitos 2026">
+  <meta property="og:description"
+    content="Tres videoclips en plastilina para el disco Antimeme. Dirección y edición de Ariel Hernán Contini.">
+  <meta property="og:image" content="https://itherea.github.io/koprolitos/assets/og.jpg">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:url" content="https://itherea.github.io/koprolitos/">
+  <meta name="twitter:card" content="summary_large_image">
 
-<link rel="preload" href="assets/fonts/big-shoulders-display-latin-900-normal.woff2" as="font" type="font/woff2" crossorigin>
-<link rel="preload" href="assets/img/portada-1920.webp" as="image" imagesrcset="assets/img/portada-1280.webp 1280w, assets/img/portada-1920.webp 1920w" imagesizes="(max-width: 1228px) 100vw, 1180px">
+  <link rel="preload" href="assets/fonts/big-shoulders-display-latin-900-normal.woff2" as="font" type="font/woff2"
+    crossorigin>
+  <link rel="preload" href="assets/img/portada-1920.webp" as="image"
+    imagesrcset="assets/img/portada-1280.webp 1280w, assets/img/portada-1920.webp 1920w"
+    imagesizes="(max-width: 1228px) 100vw, 1180px">
 
-<style>
-@font-face{font-family:"Big Shoulders Display";font-weight:500;font-display:swap;src:url(assets/fonts/big-shoulders-display-latin-500-normal.woff2) format("woff2")}
-@font-face{font-family:"Big Shoulders Display";font-weight:800;font-display:swap;src:url(assets/fonts/big-shoulders-display-latin-800-normal.woff2) format("woff2")}
-@font-face{font-family:"Big Shoulders Display";font-weight:900;font-display:swap;src:url(assets/fonts/big-shoulders-display-latin-900-normal.woff2) format("woff2")}
-@font-face{font-family:"Instrument Sans";font-weight:400;font-display:swap;src:url(assets/fonts/instrument-sans-latin-400-normal.woff2) format("woff2")}
-@font-face{font-family:"Instrument Sans";font-weight:400;font-style:italic;font-display:swap;src:url(assets/fonts/instrument-sans-latin-400-italic.woff2) format("woff2")}
-@font-face{font-family:"Instrument Sans";font-weight:500;font-display:swap;src:url(assets/fonts/instrument-sans-latin-500-normal.woff2) format("woff2")}
-@font-face{font-family:"JetBrains Mono";font-weight:400;font-display:swap;src:url(assets/fonts/jetbrains-mono-latin-400-normal.woff2) format("woff2")}
-/* Respaldo angosto: si la fuente display tarda o falla, el título no se corta */
-@font-face{font-family:"Display Fallback";src:local("Arial Narrow"),local("ArialNarrow"),local("Liberation Sans Narrow"),local("Arial"),local("Helvetica"),local("Roboto"),local("DejaVu Sans");size-adjust:60%}
+  <style>
+    @font-face {
+      font-family: "Big Shoulders Display";
+      font-weight: 500;
+      font-display: swap;
+      src: url(assets/fonts/big-shoulders-display-latin-500-normal.woff2) format("woff2")
+    }
 
-/* Layout: un corte geológico. Cada video es una "muestra" extraída de un estrato, con su mineral propio y su tira de fotogramas. */
-:root{
-  --basalt:#111315;
-  --basalt-2:#191c1f;
-  --bone:#ebe5d9;
-  --ash:#8f918c;
-  --amber:#e0a43a;
-  --line:#2a2e31;
-  --f-display:"Big Shoulders Display","Display Fallback",Impact,sans-serif;
-  --f-body:"Instrument Sans",system-ui,-apple-system,"Segoe UI",sans-serif;
-  --f-mono:"JetBrains Mono",ui-monospace,Menlo,Consolas,monospace;
-  color-scheme:dark;
-}
-*{box-sizing:border-box}
-html{-webkit-text-size-adjust:100%}
-body{margin:0;background:var(--basalt);color:var(--bone);font-family:var(--f-body);font-size:16px;line-height:1.6;
-  padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
-img{max-width:100%}
-a{color:inherit}
-a:focus-visible{outline:2px solid var(--amber);outline-offset:4px}
-.wrap{max-width:1180px;margin:0 auto}
-.mono{font-family:var(--f-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ash)}
+    @font-face {
+      font-family: "Big Shoulders Display";
+      font-weight: 800;
+      font-display: swap;
+      src: url(assets/fonts/big-shoulders-display-latin-800-normal.woff2) format("woff2")
+    }
 
-/* top bar */
-.top{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;padding-block:20px;border-bottom:1px solid var(--line)}
+    @font-face {
+      font-family: "Big Shoulders Display";
+      font-weight: 900;
+      font-display: swap;
+      src: url(assets/fonts/big-shoulders-display-latin-900-normal.woff2) format("woff2")
+    }
 
-/* hero */
-.hero{position:relative;margin-top:24px;border-radius:2px;overflow:hidden;background:var(--basalt-2);aspect-ratio:16/8;max-width:100%;min-height:340px}
-.hero img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 45%;display:block;
-  transform-origin:60% 55%;animation:drift 28s ease-in-out infinite alternate}
-@keyframes drift{from{transform:scale(1)}to{transform:scale(1.08)}}
-.hero-text{position:absolute;inset:auto 0 0 0;padding:clamp(16px,4vw,40px);padding-top:120px;
-  background:linear-gradient(to top,rgba(17,19,21,.94) 18%,rgba(17,19,21,0))}
-h1{font-family:var(--f-display);font-weight:900;text-transform:uppercase;line-height:.82;margin:0;
-  font-size:clamp(56px,15vw,220px);letter-spacing:-.01em;text-wrap:balance}
-.hero-sub{display:flex;gap:12px 32px;flex-wrap:wrap;align-items:baseline;margin-top:14px}
-.hero-sub p{margin:0;max-width:48ch;font-size:17px}
+    @font-face {
+      font-family: "Instrument Sans";
+      font-weight: 400;
+      font-display: swap;
+      src: url(assets/fonts/instrument-sans-latin-400-normal.woff2) format("woff2")
+    }
 
-/* intro */
-.intro{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px 48px;padding-block:72px 40px}
-.intro p{margin:0;max-width:62ch;font-size:19px;line-height:1.55}
-.intro p + p{margin-top:16px;font-size:16px;color:var(--ash)}
+    @font-face {
+      font-family: "Instrument Sans";
+      font-weight: 400;
+      font-style: italic;
+      font-display: swap;
+      src: url(assets/fonts/instrument-sans-latin-400-italic.woff2) format("woff2")
+    }
 
-/* specimens */
-.specimens{display:flex;flex-direction:column;gap:96px;padding-block:24px 96px}
-.spec{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,4fr);gap:28px 40px;align-items:end}
-.spec:nth-child(even){grid-template-columns:minmax(0,4fr) minmax(0,7fr)}
-.spec:nth-child(even) .poster{order:2}
-.spec:nth-child(even) .core{order:3}
-.poster{position:relative;isolation:isolate;display:block;aspect-ratio:16/9;max-width:100%;background:var(--basalt-2);overflow:hidden;text-decoration:none;border-radius:2px}
-.poster img{position:absolute;inset:0;width:100%;height:100%;display:block;object-fit:cover;transition:transform .8s cubic-bezier(.2,.7,.2,1);z-index:-1}
-.poster:hover img{transform:scale(1.035)}
-a.poster::before{content:"";position:absolute;inset:0 0 auto 0;height:35%;background:linear-gradient(to bottom,rgba(17,19,21,.55),rgba(17,19,21,0))}
-.poster iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
-.play{position:absolute;left:clamp(14px,3vw,28px);bottom:clamp(14px,3vw,28px);display:inline-flex;align-items:center;gap:12px;
-  padding:12px 18px 12px 14px;background:var(--bone);color:var(--basalt);font-family:var(--f-mono);font-size:13px;letter-spacing:.06em;text-transform:uppercase;border-radius:999px;
-  transition:background .25s,color .25s}
-.play svg{width:18px;height:18px;flex:none}
-.poster:hover .play,.poster:focus-visible .play{background:var(--mineral);color:var(--basalt)}
-.tag{position:absolute;top:clamp(14px,3vw,24px);left:clamp(14px,3vw,28px)}
-.tag .mono{color:var(--bone);opacity:.9}
-.meta{min-width:0;display:flex;flex-direction:column;gap:18px}
-.stratum{font-family:var(--f-display);font-weight:800;text-transform:uppercase;line-height:.9;font-size:clamp(48px,7vw,96px);margin:0;color:var(--mineral)}
-.meta h2{font-family:var(--f-display);font-weight:500;font-size:28px;line-height:1.1;margin:0;text-transform:uppercase;letter-spacing:.02em}
-.concept{margin:0;font-size:17px;line-height:1.5;max-width:40ch}
-.sheet{display:grid;grid-template-columns:auto minmax(0,1fr);gap:8px 20px;margin:0;padding-top:16px;border-top:1px solid var(--line)}
-.sheet dt{font-family:var(--f-mono);font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ash);padding-top:3px}
-.sheet dd{margin:0;font-size:15px;overflow-wrap:anywhere}
-.sheet .num{font-variant-numeric:tabular-nums}
-.core{grid-column:1/-1;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:0}
-.core figure{margin:0;min-width:0;display:flex;flex-direction:column;gap:8px}
-.core img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;border-radius:2px;background:var(--basalt-2)}
+    @font-face {
+      font-family: "Instrument Sans";
+      font-weight: 500;
+      font-display: swap;
+      src: url(assets/fonts/instrument-sans-latin-500-normal.woff2) format("woff2")
+    }
 
-/* album */
-.album{border-top:1px solid var(--line);padding-block:64px;display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:32px 48px;align-items:center}
-.album img{display:block;width:100%;height:auto;max-width:480px;border-radius:2px}
-.album h2{font-family:var(--f-display);font-weight:900;text-transform:uppercase;line-height:.85;font-size:clamp(56px,9vw,128px);margin:6px 0 20px;letter-spacing:-.01em}
-.album p{margin:0 0 24px;max-width:52ch}
-.members{list-style:none;margin:8px 0 0;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:6px 24px;font-size:18px}
-.members li{min-width:0}
-.album .ig{display:inline-block;margin-top:24px;font-family:var(--f-mono);font-size:13px;letter-spacing:.04em;text-decoration:none;border-bottom:1px solid var(--amber);padding-bottom:2px}
-.album .ig:hover{color:var(--amber)}
-.album .label{margin:20px 0 0}
+    @font-face {
+      font-family: "JetBrains Mono";
+      font-weight: 400;
+      font-display: swap;
+      src: url(assets/fonts/jetbrains-mono-latin-400-normal.woff2) format("woff2")
+    }
 
-/* process + credits */
-.band{border-top:1px solid var(--line);padding-block:64px;display:grid;grid-template-columns:minmax(0,1fr) minmax(0,2fr);gap:24px 48px}
-.band h2{font-family:var(--f-display);font-weight:800;text-transform:uppercase;font-size:40px;line-height:.95;margin:0}
-.band p{margin:0 0 14px;max-width:62ch}
-.split{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:24px;margin-top:8px}
-.split div{border-top:2px solid var(--amber);padding-top:12px}
-.split div:last-child{border-color:var(--ash)}
-.split p{font-size:15px;color:var(--ash);margin:6px 0 0}
-.credits{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:24px}
-.credits div{min-width:0}
-.credits strong{display:block;font-weight:500;font-size:18px;margin-top:4px}
-footer{border-top:1px solid var(--line);padding-block:24px 40px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+    /* Respaldo angosto: si la fuente display tarda o falla, el título no se corta */
+    @font-face {
+      font-family: "Display Fallback";
+      src: local("Arial Narrow"), local("ArialNarrow"), local("Liberation Sans Narrow"), local("Arial"), local("Helvetica"), local("Roboto"), local("DejaVu Sans");
+      size-adjust: 60%
+    }
 
-@media (max-width:760px){
-  .intro,.band,.album{grid-template-columns:minmax(0,1fr)}
-  .spec,.spec:nth-child(even){grid-template-columns:minmax(0,1fr)}
-  .spec:nth-child(even) .poster{order:0}
-  .split,.core{grid-template-columns:minmax(0,1fr)}
-  .hero{aspect-ratio:auto;height:460px}
-}
-@media (prefers-reduced-motion:reduce){.hero img{animation:none}.poster img{transition:none}.poster:hover img{transform:none}}
-</style>
+    /* Layout: un corte geológico. Cada video es una "muestra" extraída de un estrato, con su mineral propio y su tira de fotogramas. */
+    :root {
+      --basalt: #111315;
+      --basalt-2: #191c1f;
+      --bone: #ebe5d9;
+      --ash: #8f918c;
+      --amber: #e0a43a;
+      --line: #2a2e31;
+      --f-display: "Big Shoulders Display", "Display Fallback", Impact, sans-serif;
+      --f-body: "Instrument Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+      --f-mono: "JetBrains Mono", ui-monospace, Menlo, Consolas, monospace;
+      color-scheme: dark;
+    }
+
+    * {
+      box-sizing: border-box
+    }
+
+    html {
+      -webkit-text-size-adjust: 100%
+    }
+
+    body {
+      margin: 0;
+      background: var(--basalt);
+      color: var(--bone);
+      font-family: var(--f-body);
+      font-size: 16px;
+      line-height: 1.6;
+      padding-left: max(16px, env(safe-area-inset-left, 0px));
+      padding-right: max(16px, env(safe-area-inset-right, 0px))
+    }
+
+    img {
+      max-width: 100%
+    }
+
+    a {
+      color: inherit
+    }
+
+    a:focus-visible {
+      outline: 2px solid var(--amber);
+      outline-offset: 4px
+    }
+
+    .wrap {
+      max-width: 1180px;
+      margin: 0 auto
+    }
+
+    .mono {
+      font-family: var(--f-mono);
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+      color: var(--ash)
+    }
+
+    /* top bar */
+    .top {
+      display: flex;
+      justify-content: space-between;
+      gap: 16px;
+      flex-wrap: wrap;
+      padding-block: 20px;
+      border-bottom: 1px solid var(--line)
+    }
+
+    /* hero */
+    .hero {
+      position: relative;
+      margin-top: 24px;
+      border-radius: 2px;
+      overflow: hidden;
+      background: var(--basalt-2);
+      aspect-ratio: 16/8;
+      max-width: 100%;
+      min-height: 340px
+    }
+
+    .hero img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: 50% 45%;
+      display: block;
+      transform-origin: 60% 55%;
+      animation: drift 28s ease-in-out infinite alternate
+    }
+
+    @keyframes drift {
+      from {
+        transform: scale(1)
+      }
+
+      to {
+        transform: scale(1.08)
+      }
+    }
+
+    .hero-text {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: clamp(16px, 4vw, 40px);
+      padding-top: 120px;
+      background: linear-gradient(to top, rgba(17, 19, 21, .94) 18%, rgba(17, 19, 21, 0))
+    }
+
+    h1 {
+      font-family: var(--f-display);
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: .82;
+      margin: 0;
+      font-size: clamp(56px, 15vw, 220px);
+      letter-spacing: -.01em;
+      text-wrap: balance
+    }
+
+    .hero-sub {
+      display: flex;
+      gap: 12px 32px;
+      flex-wrap: wrap;
+      align-items: baseline;
+      margin-top: 14px
+    }
+
+    .hero-sub p {
+      margin: 0;
+      max-width: 48ch;
+      font-size: 17px
+    }
+
+    /* intro */
+    .intro {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+      gap: 24px 48px;
+      padding-block: 72px 40px
+    }
+
+    .intro p {
+      margin: 0;
+      max-width: 62ch;
+      font-size: 19px;
+      line-height: 1.55
+    }
+
+    .intro p+p {
+      margin-top: 16px;
+      font-size: 16px;
+      color: var(--ash)
+    }
+
+    /* specimens */
+    .specimens {
+      display: flex;
+      flex-direction: column;
+      gap: 96px;
+      padding-block: 24px 96px
+    }
+
+    .spec {
+      display: grid;
+      grid-template-columns: minmax(0, 7fr) minmax(0, 4fr);
+      gap: 28px 40px;
+      align-items: end
+    }
+
+    .spec:nth-child(even) {
+      grid-template-columns: minmax(0, 4fr) minmax(0, 7fr)
+    }
+
+    .spec:nth-child(even) .poster {
+      order: 2
+    }
+
+    .spec:nth-child(even) .core {
+      order: 3
+    }
+
+    .poster {
+      position: relative;
+      isolation: isolate;
+      display: block;
+      aspect-ratio: 16/9;
+      max-width: 100%;
+      background: var(--basalt-2);
+      overflow: hidden;
+      text-decoration: none;
+      border-radius: 2px
+    }
+
+    .poster img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      transition: transform .8s cubic-bezier(.2, .7, .2, 1);
+      z-index: -1
+    }
+
+    .poster:hover img {
+      transform: scale(1.035)
+    }
+
+    a.poster::before {
+      content: "";
+      position: absolute;
+      inset: 0 0 auto 0;
+      height: 35%;
+      background: linear-gradient(to bottom, rgba(17, 19, 21, .55), rgba(17, 19, 21, 0))
+    }
+
+    .poster iframe {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      border: 0;
+      display: block
+    }
+
+    .play {
+      position: absolute;
+      left: clamp(14px, 3vw, 28px);
+      bottom: clamp(14px, 3vw, 28px);
+      display: inline-flex;
+      align-items: center;
+      gap: 12px;
+      padding: 12px 18px 12px 14px;
+      background: var(--bone);
+      color: var(--basalt);
+      font-family: var(--f-mono);
+      font-size: 13px;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      border-radius: 999px;
+      transition: background .25s, color .25s
+    }
+
+    .play svg {
+      width: 18px;
+      height: 18px;
+      flex: none
+    }
+
+    .poster:hover .play,
+    .poster:focus-visible .play {
+      background: var(--mineral);
+      color: var(--basalt)
+    }
+
+    .tag {
+      position: absolute;
+      top: clamp(14px, 3vw, 24px);
+      left: clamp(14px, 3vw, 28px)
+    }
+
+    .tag .mono {
+      color: var(--bone);
+      opacity: .9
+    }
+
+    .meta {
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 18px
+    }
+
+    .stratum {
+      font-family: var(--f-display);
+      font-weight: 800;
+      text-transform: uppercase;
+      line-height: .9;
+      font-size: clamp(48px, 7vw, 96px);
+      margin: 0;
+      color: var(--mineral)
+    }
+
+    .meta h2 {
+      font-family: var(--f-display);
+      font-weight: 500;
+      font-size: 28px;
+      line-height: 1.1;
+      margin: 0;
+      text-transform: uppercase;
+      letter-spacing: .02em
+    }
+
+    .concept {
+      margin: 0;
+      font-size: 17px;
+      line-height: 1.5;
+      max-width: 40ch
+    }
+
+    .sheet {
+      display: grid;
+      grid-template-columns: auto minmax(0, 1fr);
+      gap: 8px 20px;
+      margin: 0;
+      padding-top: 16px;
+      border-top: 1px solid var(--line)
+    }
+
+    .sheet dt {
+      font-family: var(--f-mono);
+      font-size: 11px;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      color: var(--ash);
+      padding-top: 3px
+    }
+
+    .sheet dd {
+      margin: 0;
+      font-size: 15px;
+      overflow-wrap: anywhere
+    }
+
+    .sheet .num {
+      font-variant-numeric: tabular-nums
+    }
+
+    .core {
+      grid-column: 1/-1;
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 12px;
+      margin: 0
+    }
+
+    .core figure {
+      margin: 0;
+      min-width: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 8px
+    }
+
+    .core img {
+      display: block;
+      width: 100%;
+      height: auto;
+      aspect-ratio: 16/9;
+      object-fit: cover;
+      border-radius: 2px;
+      background: var(--basalt-2)
+    }
+
+    /* album */
+    .album {
+      border-top: 1px solid var(--line);
+      padding-block: 64px;
+      display: grid;
+      grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+      gap: 32px 48px;
+      align-items: center
+    }
+
+    .album img {
+      display: block;
+      width: 100%;
+      height: auto;
+      max-width: 480px;
+      border-radius: 2px
+    }
+
+    .album h2 {
+      font-family: var(--f-display);
+      font-weight: 900;
+      text-transform: uppercase;
+      line-height: .85;
+      font-size: clamp(56px, 9vw, 128px);
+      margin: 6px 0 20px;
+      letter-spacing: -.01em
+    }
+
+    .album p {
+      margin: 0 0 24px;
+      max-width: 52ch
+    }
+
+    .members {
+      list-style: none;
+      margin: 8px 0 0;
+      padding: 0;
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 6px 24px;
+      font-size: 18px
+    }
+
+    .members li {
+      min-width: 0
+    }
+
+    .album .ig {
+      display: inline-block;
+      margin-top: 24px;
+      font-family: var(--f-mono);
+      font-size: 13px;
+      letter-spacing: .04em;
+      text-decoration: none;
+      border-bottom: 1px solid var(--amber);
+      padding-bottom: 2px
+    }
+
+    .album .ig:hover {
+      color: var(--amber)
+    }
+
+    .album .label {
+      margin: 20px 0 0
+    }
+
+    /* process + credits */
+    .band {
+      border-top: 1px solid var(--line);
+      padding-block: 64px;
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(0, 2fr);
+      gap: 24px 48px
+    }
+
+    .band h2 {
+      font-family: var(--f-display);
+      font-weight: 800;
+      text-transform: uppercase;
+      font-size: 40px;
+      line-height: .95;
+      margin: 0
+    }
+
+    .band p {
+      margin: 0 0 14px;
+      max-width: 62ch
+    }
+
+    .split {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 24px;
+      margin-top: 8px
+    }
+
+    .split div {
+      border-top: 2px solid var(--amber);
+      padding-top: 12px
+    }
+
+    .split div:last-child {
+      border-color: var(--ash)
+    }
+
+    .split p {
+      font-size: 15px;
+      color: var(--ash);
+      margin: 6px 0 0
+    }
+
+    .credits {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 24px
+    }
+
+    .credits div {
+      min-width: 0
+    }
+
+    .credits strong {
+      display: block;
+      font-weight: 500;
+      font-size: 18px;
+      margin-top: 4px
+    }
+
+    footer {
+      border-top: 1px solid var(--line);
+      padding-block: 24px 40px;
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 12px
+    }
+
+    @media (max-width:760px) {
+
+      .intro,
+      .band,
+      .album {
+        grid-template-columns: minmax(0, 1fr)
+      }
+
+      .spec,
+      .spec:nth-child(even) {
+        grid-template-columns: minmax(0, 1fr)
+      }
+
+      .spec:nth-child(even) .poster {
+        order: 0
+      }
+
+      .split,
+      .core {
+        grid-template-columns: minmax(0, 1fr)
+      }
+
+      .hero {
+        aspect-ratio: auto;
+        height: 460px
+      }
+    }
+
+    @media (prefers-reduced-motion:reduce) {
+      .hero img {
+        animation: none
+      }
+
+      .poster img {
+        transition: none
+      }
+
+      .poster:hover img {
+        transform: none
+      }
+    }
+  </style>
 </head>
+
 <body>
-<div class="wrap">
-  <header class="top">
-    <span class="mono">Archivo audiovisual · 2026</span>
-    <span class="mono">3 muestras</span>
-  </header>
+  <div class="wrap">
+    <header class="top">
+      <span class="mono">Archivo audiovisual · 2026</span>
+      <span class="mono">3 muestras</span>
+    </header>
 
-  <main>
-  <section class="hero" aria-label="Portada">
-    <img src="assets/img/portada-1920.webp" srcset="assets/img/portada-1280.webp 1280w, assets/img/portada-1920.webp 1920w" sizes="(max-width: 1228px) 100vw, 1180px" width="1920" height="1080" fetchpriority="high"
-      alt="Dos carnotaurus de plastilina, uno amarillo y uno rosado, sobre un suelo de arcilla con espirales, bajo un cielo estrellado">
-    <div class="hero-text">
-      <h1>Koprolitos</h1>
-      <div class="hero-sub">
-        <p>Tres videoclips en plastilina para el disco <em>Antimeme</em>. Dirección y edición de Ariel Hernán Contini.</p>
-        <span class="mono">Patagonia argentina</span>
-      </div>
-    </div>
-  </section>
+    <main>
+      <section class="hero" aria-label="Portada">
+        <img src="assets/img/portada-1920.webp"
+          srcset="assets/img/portada-1280.webp 1280w, assets/img/portada-1920.webp 1920w"
+          sizes="(max-width: 1228px) 100vw, 1180px" width="1920" height="1080" fetchpriority="high"
+          alt="Dos carnotaurus de plastilina, uno amarillo y uno rosado, sobre un suelo de arcilla con espirales, bajo un cielo estrellado">
+        <div class="hero-text">
+          <h1>Koprolitos</h1>
+          <div class="hero-sub">
+            <p>Tres videoclips en plastilina para el disco <em>Antimeme</em>. Dirección y edición de Ariel Hernán
+              Contini.</p>
+            <span class="mono">Patagonia argentina</span>
+          </div>
+        </div>
+      </section>
 
-  <section class="intro" aria-labelledby="intro-label">
-    <span class="mono" id="intro-label">Sobre esta muestra</span>
-    <div>
-      <p>Tres piezas de animación experimental en plastilina para <em>Antimeme</em>, el disco de Koprolitos. Cada video está presentado como una muestra extraída de un estrato distinto, articulando texturas de arcilla, iluminación escénica y animación cuadro a cuadro.</p>
-    </div>
-  </section>
+      <section class="intro" aria-labelledby="intro-label">
+        <span class="mono" id="intro-label">Sobre esta muestra</span>
+        <div>
+          <p>Tres piezas de animación experimental en plastilina para <em>Antimeme</em>, el disco de Koprolitos. Cada
+            video está presentado como una muestra extraída de un estrato distinto, articulando texturas de arcilla,
+            iluminación escénica y animación cuadro a cuadro.</p>
+        </div>
+      </section>
 
-  <section class="specimens" id="muestras" aria-label="Videos">
-    <!-- ESTRATO 01 -->
-    <article class="spec" style="--mineral:#e0a43a">
-      <a class="poster" data-yt="hHB4SJT_kek" href="https://www.youtube.com/watch?v=hHB4SJT_kek" target="_blank" rel="noopener" aria-label="Reproducir Nada de mí">
-        <img src="assets/img/estrato-01-poster-1600.webp" srcset="assets/img/estrato-01-poster-960.webp 960w, assets/img/estrato-01-poster-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 700px" width="1600" height="900" loading="lazy"
-          alt="Personaje de plastilina con capucha de lana, la cara iluminada en rojo por una esfera que orbita en un alambre">
-        <span class="tag"><span class="mono">KP-26-01 · ámbar</span></span>
-        <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>Reproducir · 3:09</span>
-      </a>
-      <div class="meta">
-        <p class="stratum">Estrato 01</p>
-        <h2>Nada de mí</h2>
-        <p class="concept">Las imágenes nacen de la letra de la canción. Alguien busca encajar en un lugar que no le hace espacio y termina fundiéndose con la realidad, hasta diluirse.</p>
-        <dl class="sheet">
-          <dt>Banda</dt><dd>Koprolitos</dd>
-          <dt>Disco</dt><dd><em>Antimeme</em></dd>
-          <dt>Año</dt><dd class="num">2026</dd>
-          <dt>Duración</dt><dd class="num">3:09</dd>
-          <dt>Formato</dt><dd>Animación experimental</dd>
-          <dt>Técnica</dt><dd>IA generativa</dd>
-          <dt>Dirección</dt><dd>Ariel H. Contini</dd>
-        </dl>
-      </div>
-      <div class="core" role="group" aria-label="Fotogramas de Nada de mí">
-        <figure><img src="assets/img/estrato-01-a-800.webp" width="800" height="450" loading="lazy" alt="El personaje de frente sobre un fondo de plastilina azul, rodeado por un alambre con dos esferas rojas"><figcaption class="mono">KP-26-01-a</figcaption></figure>
-        <figure><img src="assets/img/estrato-01-b-800.webp" width="800" height="450" loading="lazy" alt="El personaje apoya la mano contra un vidrio, con fuego desenfocado detrás"><figcaption class="mono">KP-26-01-b</figcaption></figure>
-        <figure><img src="assets/img/estrato-01-c-800.webp" width="800" height="450" loading="lazy" alt="El personaje de espaldas camina por un suelo agrietado al atardecer junto a una figura blanca de plastilina"><figcaption class="mono">KP-26-01-c</figcaption></figure>
-      </div>
-    </article>
+      <section class="specimens" id="muestras" aria-label="Videos">
+        <!-- ESTRATO 01 -->
+        <article class="spec" style="--mineral:#e0a43a">
+          <a class="poster" data-yt="hHB4SJT_kek" href="https://www.youtube.com/watch?v=hHB4SJT_kek" target="_blank"
+            rel="noopener" aria-label="Reproducir Nada de mí">
+            <img src="assets/img/estrato-01-poster-1600.webp"
+              srcset="assets/img/estrato-01-poster-960.webp 960w, assets/img/estrato-01-poster-1600.webp 1600w"
+              sizes="(max-width: 760px) 100vw, 700px" width="1600" height="900" loading="lazy"
+              alt="Personaje de plastilina con capucha de lana, la cara iluminada en rojo por una esfera que orbita en un alambre">
+            <span class="tag"><span class="mono">KP-26-01 · ámbar</span></span>
+            <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M7 4.5v15l13-7.5z" />
+              </svg>Reproducir · 3:09</span>
+          </a>
+          <div class="meta">
+            <p class="stratum">Estrato 01</p>
+            <h2>Nada de mí</h2>
+            <p class="concept">Las imágenes nacen de la letra de la canción. Alguien busca encajar en un lugar que no le
+              hace espacio y termina fundiéndose con la realidad, hasta diluirse.</p>
+            <dl class="sheet">
+              <dt>Banda</dt>
+              <dd>Koprolitos</dd>
+              <dt>Disco</dt>
+              <dd><em>Antimeme</em></dd>
+              <dt>Año</dt>
+              <dd class="num">2026</dd>
+              <dt>Duración</dt>
+              <dd class="num">3:09</dd>
+              <dt>Formato</dt>
+              <dd>Experimental</dd>
+              <dt>Técnica</dt>
+              <dd>Animación generativa</dd>
+              <dt>Dirección</dt>
+              <dd>Ariel H. Contini</dd>
+            </dl>
+          </div>
+          <div class="core" role="group" aria-label="Fotogramas de Nada de mí">
+            <figure><img src="assets/img/estrato-01-a-800.webp" width="800" height="450" loading="lazy"
+                alt="El personaje de frente sobre un fondo de plastilina azul, rodeado por un alambre con dos esferas rojas">
+              <figcaption class="mono">KP-26-01-a</figcaption>
+            </figure>
+            <figure><img src="assets/img/estrato-01-b-800.webp" width="800" height="450" loading="lazy"
+                alt="El personaje apoya la mano contra un vidrio, con fuego desenfocado detrás">
+              <figcaption class="mono">KP-26-01-b</figcaption>
+            </figure>
+            <figure><img src="assets/img/estrato-01-c-800.webp" width="800" height="450" loading="lazy"
+                alt="El personaje de espaldas camina por un suelo agrietado al atardecer junto a una figura blanca de plastilina">
+              <figcaption class="mono">KP-26-01-c</figcaption>
+            </figure>
+          </div>
+        </article>
 
-    <!-- ESTRATO 02 -->
-    <article class="spec" style="--mineral:#7fa6e3">
-      <a class="poster" data-yt="nhssz8m2v6I" href="https://www.youtube.com/watch?v=nhssz8m2v6I" target="_blank" rel="noopener" aria-label="Reproducir Civiles">
-        <img src="assets/img/estrato-02-poster-1600.webp" srcset="assets/img/estrato-02-poster-960.webp 960w, assets/img/estrato-02-poster-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 700px" width="1600" height="900" loading="lazy"
-          alt="Una esfera hecha de plastilina de colores pastel, cubierta de caras asustadas, manos y relojes con agujas doradas">
-        <span class="tag"><span class="mono">KP-26-02 · azurita</span></span>
-        <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>Reproducir · 2:58</span>
-      </a>
-      <div class="meta">
-        <p class="stratum">Estrato 02</p>
-        <h2>Civiles</h2>
-        <p class="concept">Una estética circense que parte de Monty Python y se cruza con <em>Everyone Comes to the Freak Show</em>, de The Residents.</p>
-        <dl class="sheet">
-          <dt>Banda</dt><dd>Koprolitos</dd>
-          <dt>Disco</dt><dd><em>Antimeme</em></dd>
-          <dt>Año</dt><dd class="num">2026</dd>
-          <dt>Duración</dt><dd class="num">2:58</dd>
-          <dt>Formato</dt><dd>Animación experimental en plastilina</dd>
-          <dt>Técnica</dt><dd>IA generativa</dd>
-          <dt>Dirección</dt><dd>Ariel H. Contini</dd>
-        </dl>
-      </div>
-      <div class="core" role="group" aria-label="Fotogramas de Civiles">
-        <figure><img src="assets/img/estrato-02-a-800.webp" width="800" height="450" loading="lazy" alt="Dos figuras de plastilina, una gris y una azul con gorra de policía, se besan y sus caras se funden en remolinos azules y blancos"><figcaption class="mono">KP-26-02-a</figcaption></figure>
-        <figure><img src="assets/img/estrato-02-b-800.webp" width="800" height="450" loading="lazy" alt="Un pie gigante con forma de mano hace el gesto de pulgar arriba frente a un público de payasos en las gradas"><figcaption class="mono">KP-26-02-b</figcaption></figure>
-        <figure><img src="assets/img/estrato-02-c-800.webp" width="800" height="450" loading="lazy" alt="Un león domador con traje azul brillante y un látigo de retazos ruge en la pista del circo, junto a una letra W roja con ojos"><figcaption class="mono">KP-26-02-c</figcaption></figure>
-      </div>
-    </article>
+        <!-- ESTRATO 02 -->
+        <article class="spec" style="--mineral:#7fa6e3">
+          <a class="poster" data-yt="nhssz8m2v6I" href="https://www.youtube.com/watch?v=nhssz8m2v6I" target="_blank"
+            rel="noopener" aria-label="Reproducir Civiles">
+            <img src="assets/img/estrato-02-poster-1600.webp"
+              srcset="assets/img/estrato-02-poster-960.webp 960w, assets/img/estrato-02-poster-1600.webp 1600w"
+              sizes="(max-width: 760px) 100vw, 700px" width="1600" height="900" loading="lazy"
+              alt="Una esfera hecha de plastilina de colores pastel, cubierta de caras asustadas, manos y relojes con agujas doradas">
+            <span class="tag"><span class="mono">KP-26-02 · azurita</span></span>
+            <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M7 4.5v15l13-7.5z" />
+              </svg>Reproducir · 2:58</span>
+          </a>
+          <div class="meta">
+            <p class="stratum">Estrato 02</p>
+            <h2>Civiles</h2>
+            <p class="concept">Una estética circense que parte de Monty Python y se cruza con <em>Everyone Comes to the
+                Freak Show</em>, de The Residents.</p>
+            <dl class="sheet">
+              <dt>Banda</dt>
+              <dd>Koprolitos</dd>
+              <dt>Disco</dt>
+              <dd><em>Antimeme</em></dd>
+              <dt>Año</dt>
+              <dd class="num">2026</dd>
+              <dt>Duración</dt>
+              <dd class="num">2:58</dd>
+              <dt>Formato</dt>
+              <dd>Animación experimental en plastilina</dd>
+              <dt>Técnica</dt>
+              <dd>IA generativa</dd>
+              <dt>Idea</dt>
+              <dd>Gaspar Daffunchio</dd>
+              <dt>Dirección</dt>
+              <dd>Ariel H. Contini</dd>
+            </dl>
+          </div>
+          <div class="core" role="group" aria-label="Fotogramas de Civiles">
+            <figure><img src="assets/img/estrato-02-a-800.webp" width="800" height="450" loading="lazy"
+                alt="Dos figuras de plastilina, una gris y una azul con gorra de policía, se besan y sus caras se funden en remolinos azules y blancos">
+              <figcaption class="mono">KP-26-02-a</figcaption>
+            </figure>
+            <figure><img src="assets/img/estrato-02-b-800.webp" width="800" height="450" loading="lazy"
+                alt="Un pie gigante con forma de mano hace el gesto de pulgar arriba frente a un público de payasos en las gradas">
+              <figcaption class="mono">KP-26-02-b</figcaption>
+            </figure>
+            <figure><img src="assets/img/estrato-02-c-800.webp" width="800" height="450" loading="lazy"
+                alt="Un león domador con traje azul brillante y un látigo de retazos ruge en la pista del circo, junto a una letra W roja con ojos">
+              <figcaption class="mono">KP-26-02-c</figcaption>
+            </figure>
+          </div>
+        </article>
 
-    <!-- ESTRATO 03 -->
-    <article class="spec" style="--mineral:#d97a5c">
-      <a class="poster" data-yt="ZwkB-K8fPCs" href="https://www.youtube.com/watch?v=ZwkB-K8fPCs" target="_blank" rel="noopener" aria-label="Reproducir Panal">
-        <img src="assets/img/estrato-03-poster-1600.webp" srcset="assets/img/estrato-03-poster-960.webp 960w, assets/img/estrato-03-poster-1600.webp 1600w" sizes="(max-width: 760px) 100vw, 700px" width="1600" height="900" loading="lazy"
-          alt="Dos carnotaurus de plastilina, uno amarillo y uno rosado, vistos de espaldas al borde de un risco frente a un cielo violeta y verde">
-        <span class="tag"><span class="mono">KP-26-03 · hematita</span></span>
-        <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M7 4.5v15l13-7.5z"/></svg>Reproducir · 2:18</span>
-      </a>
-      <div class="meta">
-        <p class="stratum">Estrato 03</p>
-        <h2>Panal</h2>
-        <p class="concept">Dos carnotaurus se encuentran y se lanzan juntos desde un risco. Una metáfora del acto sexual.</p>
-        <dl class="sheet">
-          <dt>Banda</dt><dd>Koprolitos</dd>
-          <dt>Disco</dt><dd><em>Antimeme</em></dd>
-          <dt>Año</dt><dd class="num">2026</dd>
-          <dt>Duración</dt><dd class="num">2:18</dd>
-          <dt>Especie</dt><dd><em>Carnotaurus sastrei</em>, Cretácico tardío, Chubut</dd>
-          <dt>Técnica</dt><dd>IA generativa</dd>
-          <dt>Dirección</dt><dd>Ariel H. Contini</dd>
-        </dl>
-      </div>
-      <div class="core" role="group" aria-label="Fotogramas de Panal">
-        <figure><img src="assets/img/estrato-03-a-800.webp" width="800" height="450" loading="lazy" alt="Un carnotaurus rosado camina por un suelo de arcilla frente a un portal luminoso con forma de huevo"><figcaption class="mono">KP-26-03-a</figcaption></figure>
-        <figure><img src="assets/img/estrato-03-d-800.webp" width="800" height="450" loading="lazy" alt="Los dos carnotaurus, rosado y amarillo, miran hacia arriba frente a una pared de arcilla oscura y modelada"><figcaption class="mono">KP-26-03-b</figcaption></figure>
-        <figure><img src="assets/img/estrato-03-c-800.webp" width="800" height="450" loading="lazy" alt="Un carnotaurus rosado enroscado sobre sí mismo entre pasto azul y hongos de plastilina"><figcaption class="mono">KP-26-03-c</figcaption></figure>
-      </div>
-    </article>
-  </section>
+        <!-- ESTRATO 03 -->
+        <article class="spec" style="--mineral:#d97a5c">
+          <a class="poster" data-yt="ZwkB-K8fPCs" href="https://www.youtube.com/watch?v=ZwkB-K8fPCs" target="_blank"
+            rel="noopener" aria-label="Reproducir Panal">
+            <img src="assets/img/estrato-03-poster-1600.webp"
+              srcset="assets/img/estrato-03-poster-960.webp 960w, assets/img/estrato-03-poster-1600.webp 1600w"
+              sizes="(max-width: 760px) 100vw, 700px" width="1600" height="900" loading="lazy"
+              alt="Dos carnotaurus de plastilina, uno amarillo y uno rosado, vistos de espaldas al borde de un risco frente a un cielo violeta y verde">
+            <span class="tag"><span class="mono">KP-26-03 · hematita</span></span>
+            <span class="play"><svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M7 4.5v15l13-7.5z" />
+              </svg>Reproducir · 2:18</span>
+          </a>
+          <div class="meta">
+            <p class="stratum">Estrato 03</p>
+            <h2>Panal</h2>
+            <p class="concept">Dos carnotaurus se encuentran y se lanzan juntos desde un risco. Una metáfora del acto
+              sexual.</p>
+            <dl class="sheet">
+              <dt>Banda</dt>
+              <dd>Koprolitos</dd>
+              <dt>Disco</dt>
+              <dd><em>Antimeme</em></dd>
+              <dt>Año</dt>
+              <dd class="num">2026</dd>
+              <dt>Duración</dt>
+              <dd class="num">2:18</dd>
+              <dt>Especie</dt>
+              <dd><em>Carnotaurus sastrei</em>, Cretácico tardío, Chubut</dd>
+              <dt>Técnica</dt>
+              <dd>Animación generativa</dd>
+              <dt>Idea</dt>
+              <dd>Gaspar Daffunchio</dd>
+              <dt>Dirección</dt>
+              <dd>Ariel H. Contini</dd>
+            </dl>
+          </div>
+          <div class="core" role="group" aria-label="Fotogramas de Panal">
+            <figure><img src="assets/img/estrato-03-a-800.webp" width="800" height="450" loading="lazy"
+                alt="Un carnotaurus rosado camina por un suelo de arcilla frente a un portal luminoso con forma de huevo">
+              <figcaption class="mono">KP-26-03-a</figcaption>
+            </figure>
+            <figure><img src="assets/img/estrato-03-d-800.webp" width="800" height="450" loading="lazy"
+                alt="Los dos carnotaurus, rosado y amarillo, miran hacia arriba frente a una pared de arcilla oscura y modelada">
+              <figcaption class="mono">KP-26-03-b</figcaption>
+            </figure>
+            <figure><img src="assets/img/estrato-03-c-800.webp" width="800" height="450" loading="lazy"
+                alt="Un carnotaurus rosado enroscado sobre sí mismo entre pasto azul y hongos de plastilina">
+              <figcaption class="mono">KP-26-03-c</figcaption>
+            </figure>
+          </div>
+        </article>
+      </section>
 
-  <section class="album" aria-labelledby="disco">
-    <img src="assets/img/antimeme-720.webp" srcset="assets/img/antimeme-480.webp 480w, assets/img/antimeme-720.webp 720w" sizes="(max-width: 760px) 100vw, 480px" width="720" height="672" loading="lazy"
-      alt="Tapa del disco Antimeme: una criatura dibujada en tinta negra, armada con objetos cotidianos como una regadera roja, una lamparita, un celular y una bicicleta, camina sobre un fondo de trazos azules junto a una rueda con la palabra Antimeme">
-    <div>
-      <span class="mono">El disco</span>
-      <h2 id="disco">Antimeme</h2>
-      <p>Los tres videos acompañan canciones de <em>Antimeme</em>, el disco de Koprolitos. Cada video lleva el nombre de su canción.</p>
-      <span class="mono">Integrantes</span>
-      <ul class="members">
-        <li>Gaspar Daffunchio</li>
-        <li>Pedro Daffunchio</li>
-        <li>Emanuel Bibiloni</li>
-        <li>Uriel Mackern</li>
-      </ul>
-      <a class="ig" href="https://www.instagram.com/koprolitos._/" target="_blank" rel="noopener">@koprolitos._ en Instagram</a>
-      <p class="mono label">℗ Escalera circular</p>
-    </div>
-  </section>
+      <section class="album" aria-labelledby="disco">
+        <img src="assets/img/antimeme-720.webp"
+          srcset="assets/img/antimeme-480.webp 480w, assets/img/antimeme-720.webp 720w"
+          sizes="(max-width: 760px) 100vw, 480px" width="720" height="672" loading="lazy"
+          alt="Tapa del disco Antimeme: una criatura dibujada en tinta negra, armada con objetos cotidianos como una regadera roja, una lamparita, un celular y una bicicleta, camina sobre un fondo de trazos azules junto a una rueda con la palabra Antimeme">
+        <div>
+          <span class="mono">El disco</span>
+          <h2 id="disco">Antimeme</h2>
+          <p>Los tres videos acompañan canciones de <em>Antimeme</em>, el disco de Koprolitos. Cada video lleva el
+            nombre de su canción.</p>
+          <span class="mono">Integrantes</span>
+          <ul class="members">
+            <li>Gaspar Daffunchio</li>
+            <li>Pedro Daffunchio</li>
+            <li>Emanuel Bibiloni</li>
+            <li>Uriel Mackern</li>
+          </ul>
+          <a class="ig" href="https://www.instagram.com/koprolitos._/" target="_blank" rel="noopener">@koprolitos._ en
+            Instagram</a>
+        </div>
+      </section>
 
-  <section class="band" aria-labelledby="proceso">
-    <h2 id="proceso">Proceso</h2>
-    <div>
-      <p>Las tres piezas se produjeron durante 2026 mediante síntesis visual generativa y animación cuadro a cuadro. La búsqueda estética hace foco en la materialidad táctil —huellas de modelado en la plastilina, fibras de lana y arcilla agrietada— sosteniendo la coherencia de cada personaje y atmósfera hasta el corte final.</p>
-      <div class="split">
-        <div><span class="mono">Materia y luz</span><p>Desarrollo visual de texturas, modelado y lenguaje escénico para cada universo.</p></div>
-        <div><span class="mono">Montaje y ritmo</span><p>Continuidad de planos, sincronía musical y colorimetría en la edición final.</p></div>
-      </div>
-    </div>
-  </section>
+      <section class="band" aria-labelledby="proceso">
+        <h2 id="proceso">Proceso</h2>
+        <div>
+          <p>Las tres piezas se produjeron durante 2026 mediante síntesis visual generativa y animación cuadro a cuadro.
+            La búsqueda estética hace foco en la materialidad táctil —huellas de modelado en la plastilina, fibras de
+            lana y arcilla agrietada— sosteniendo la coherencia de cada personaje y atmósfera hasta el corte final.</p>
+          <div class="split">
+            <div><span class="mono">Materia y luz</span>
+              <p>Desarrollo visual de texturas, modelado y lenguaje escénico para cada universo.</p>
+            </div>
+            <div><span class="mono">Montaje y ritmo</span>
+              <p>Continuidad de planos, sincronía musical y colorimetría en la edición final.</p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-  <section class="band" aria-labelledby="creditos">
-    <h2 id="creditos">Créditos</h2>
-    <div class="credits">
-      <div><span class="mono">Banda</span><strong><a href="https://www.instagram.com/koprolitos._/" target="_blank" rel="noopener">Koprolitos</a></strong></div>
-      <div><span class="mono">Dirección visual y edición</span><strong>Ariel Hernán Contini</strong></div>
-      <div><span class="mono">Contacto</span><strong><a href="https://arielhcontini.online" target="_blank" rel="noopener">arielhcontini.online</a></strong></div>
-    </div>
-  </section>
-  </main>
+      <section class="band" aria-labelledby="creditos">
+        <h2 id="creditos">Créditos</h2>
+        <div class="credits">
+          <div><span class="mono">Banda</span><strong><a href="https://www.instagram.com/koprolitos._/" target="_blank"
+                rel="noopener">Koprolitos</a></strong></div>
+          <div><span class="mono">Dirección visual y edición</span><strong>Ariel Hernán Contini</strong></div>
+          <div><span class="mono">Contacto</span><strong><a href="https://www.instagram.com/arielhcontini/s"
+                target="_blank" rel="noopener">arielhcontini.online</a></strong></div>
+        </div>
+      </section>
+    </main>
 
-  <footer>
-    <span class="mono">Koprolitos · 2026</span>
-    <span class="mono">Shaseki</span>
-  </footer>
-</div>
+    <footer>
+      <span class="mono">Escalera Circular · 2026</span>
+      <span class="mono">Shaseki</span>
+    </footer>
+  </div>
 
-<script>
-/* Fachada de YouTube: el reproductor carga recién al hacer clic.
-   Sin JavaScript, el póster sigue siendo un link a YouTube. */
-(function () {
-  var warmed = false;
-  function warm() {
-    if (warmed) return; warmed = true;
-    ['https://www.youtube-nocookie.com', 'https://i.ytimg.com', 'https://www.google.com'].forEach(function (href) {
-      var l = document.createElement('link'); l.rel = 'preconnect'; l.href = href; l.crossOrigin = '';
-      document.head.appendChild(l);
-    });
-  }
-  document.querySelectorAll('a.poster[data-yt]').forEach(function (a) {
-    a.addEventListener('pointerover', warm, { once: true });
-    a.addEventListener('focus', warm, { once: true });
-    a.addEventListener('click', function (e) {
-      if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
-      e.preventDefault();
-      var id = a.dataset.yt;
-      var frame = document.createElement('iframe');
-      frame.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1';
-      frame.title = a.getAttribute('aria-label').replace(/^Reproducir /, '');
-      frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
-      frame.allowFullscreen = true;
-      var box = document.createElement('div');
-      box.className = 'poster';
-      box.appendChild(frame);
-      a.replaceWith(box);
-      frame.focus();
-    });
-  });
-})();
-</script>
+  <script>
+    /* Fachada de YouTube: el reproductor carga recién al hacer clic.
+       Sin JavaScript, el póster sigue siendo un link a YouTube. */
+    (function () {
+      var warmed = false;
+      function warm() {
+        if (warmed) return; warmed = true;
+        ['https://www.youtube-nocookie.com', 'https://i.ytimg.com', 'https://www.google.com'].forEach(function (href) {
+          var l = document.createElement('link'); l.rel = 'preconnect'; l.href = href; l.crossOrigin = '';
+          document.head.appendChild(l);
+        });
+      }
+      document.querySelectorAll('a.poster[data-yt]').forEach(function (a) {
+        a.addEventListener('pointerover', warm, { once: true });
+        a.addEventListener('focus', warm, { once: true });
+        a.addEventListener('click', function (e) {
+          if (e.metaKey || e.ctrlKey || e.shiftKey || e.altKey || e.button !== 0) return;
+          e.preventDefault();
+          var id = a.dataset.yt;
+          var frame = document.createElement('iframe');
+          frame.src = 'https://www.youtube-nocookie.com/embed/' + id + '?autoplay=1&rel=0&playsinline=1';
+          frame.title = a.getAttribute('aria-label').replace(/^Reproducir /, '');
+          frame.allow = 'autoplay; encrypted-media; picture-in-picture; fullscreen';
+          frame.allowFullscreen = true;
+          var box = document.createElement('div');
+          box.className = 'poster';
+          box.appendChild(frame);
+          a.replaceWith(box);
+          frame.focus();
+        });
+      });
+    })();
+  </script>
 </body>
+
 </html>
