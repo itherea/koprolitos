@@ -15,7 +15,7 @@ Koprolitos: Gaspar Daffunchio, Pedro Daffunchio, Emanuel Bibiloni y Uriel Macker
 ```
 index.html            página completa (HTML, CSS y JS en un solo archivo)
 assets/
-  fonts/              Big Shoulders Display, Instrument Sans y JetBrains Mono (woff2, alojadas acá)
+  fonts/              Unbounded, Space Grotesk y JetBrains Mono (woff2, alojadas acá)
   img/                portada, fotogramas y tapa del disco en WebP
   og.jpg              imagen para compartir (1200 × 630)
   favicon.svg
@@ -23,9 +23,17 @@ assets/
 
 No hay dependencias ni proceso de build: es HTML estático.
 
+### Tipografía y sistema visual
+
+- **Unbounded** para títulos y subtítulos (variable, 200–900).
+- **Space Grotesk** para párrafos, fichas y lectura (variable, 300–700).
+- **JetBrains Mono** para etiquetas, navegación y datos de la interfaz.
+
+La paleta parte de un negro de terminal, texto hueso de alto contraste, un acento lima fosforescente para la interfaz y un color mineral por estrato (`--mineral`). Las fuentes se alojan en `assets/fonts` para no depender de Google Fonts en tiempo de ejecución.
+
 ## Cómo funciona el video
 
-Cada póster es un link a YouTube. Con JavaScript activo, al hacer clic se reemplaza por el reproductor de `youtube-nocookie.com` con autoplay, así la página no carga YouTube hasta que alguien elige ver un video. Sin JavaScript, el link abre YouTube.
+Cada póster es un link a YouTube. Con JavaScript activo, al hacer clic se reemplaza por el reproductor de `youtube-nocookie.com` con autoplay, así la página no carga YouTube hasta que alguien elige ver un video. El reproductor tiene un botón **Cerrar** y responde a `Escape` para volver al póster. Sin JavaScript, el link abre YouTube.
 
 ## Probar en local
 
@@ -44,5 +52,6 @@ Si cambia de dominio, actualizar en `index.html` el `canonical`, `og:url` y `og:
 ## Agregar un estrato
 
 1. Exportar el póster en WebP a 960 y 1600 px de ancho (`estrato-04-poster-960.webp`, `estrato-04-poster-1600.webp`) y tres fotogramas a 800 px (`estrato-04-a-800.webp`, etc.).
-2. Copiar un bloque `<article class="spec">` en `index.html`, cambiar `data-yt`, el `href`, los textos y el color `--mineral`.
-3. Actualizar el contador "3 muestras" del encabezado.
+2. Copiar un bloque `<article class="spec">` en `index.html`, cambiar `data-yt`, el `href`, los textos, el `id` (`estrato-04`), la barra (`KP-26-04`, mineral, duración) y el color `--mineral`.
+3. Agregar la canción al índice `<ol class="tracklist">` del inicio.
+4. Actualizar los contadores y la duración total: `3 muestras` / `08:25` en la portada y en la cabecera de Estratos.
